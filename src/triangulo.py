@@ -1,7 +1,19 @@
 def evaluar(a, b, c):
-    # TODO: Coloca aquí el código del ejercicio 1: Set de tenis
-    return ""
-
+    # Verifica si los lados forman un triángulo válido
+    if a + b <= c or a + c <= b or b + c <= a:
+        return "No es un triángulo válido"
+    
+    # Verifica si el triángulo es equilátero
+    if a == b and b == c:
+        return "El triángulo es equilátero"
+    
+    # Verifica si el triángulo es isósceles
+    elif a == b or a == c or b == c:
+        return "El triángulo es isósceles"
+    
+    # Si no es equilátero ni isósceles, es escaleno
+    else:
+        return "El triángulo es escaleno"
 if __name__ == '__main__':
     print("a:", end="")
     a = float(input())
